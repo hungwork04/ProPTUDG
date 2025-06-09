@@ -50,10 +50,9 @@ public class EnemyProjectile : EnemyDamage
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	protected override void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (hit) return;
-
 		hit = true;
 		base.OnTriggerEnter2D(collision);
 		coll.enabled = false;

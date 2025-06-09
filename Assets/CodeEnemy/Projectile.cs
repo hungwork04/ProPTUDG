@@ -9,10 +9,12 @@ public class Projectile : MonoBehaviour
 
 	private Animator anim;
 	[SerializeField]private BoxCollider2D boxCollider;
+	Rigidbody2D rb;
 
 	private void Awake()
 	{
 		anim = GetComponent<Animator>();
+		rb=GetComponent<Rigidbody2D>();
 		boxCollider = GetComponent<BoxCollider2D>();
 	}
 
@@ -20,8 +22,9 @@ public class Projectile : MonoBehaviour
 	{
 		if (hit) return;
 
-		float movementSpeed = speed * Time.deltaTime * direction;
-		transform.Translate(movementSpeed, 0f, 0f, Space.World);
+		float movementForce = speed * direction;
+		rb.AddForce(movementForce * Vector2.right);
+		// transform.Translate(movementSpeed, 0f, 0f, Space.World);
 
 		lifetime += Time.deltaTime;
 		if (lifetime > 5f)

@@ -7,13 +7,15 @@ public class HealthPlayer : MonoBehaviour
 	[Header("Health")]
 	[SerializeField] private float startingHealth = 5;
 	public float currentHealth { get; private set; }
-	private Animator anim;
+	//private Animator anim;
 	private bool dead;
 
 	[Header("iFrames")]
 	[SerializeField] private float iFramesDuration = 0.5f;
 	[SerializeField] private int numberOfFlashes = 3;
-	private SpriteRenderer spriteRend;
+	//private SpriteRenderer spriteRend;
+	public SpriteRenderer[] spriteRend;
+
 
 	[Header("Components")]
 	[SerializeField] private Behaviour[] components;
@@ -25,8 +27,8 @@ public class HealthPlayer : MonoBehaviour
 	private void Awake()
 	{
 		currentHealth = startingHealth;
-		anim = GetComponent<Animator>();
-		spriteRend = GetComponent<SpriteRenderer>();
+		//anim = GetComponent<Animator>();
+		//spriteRend = GetComponents<SpriteRenderer>();
 		UpdateHealthUI();
 	}
 
@@ -39,7 +41,7 @@ public class HealthPlayer : MonoBehaviour
 
 		if (currentHealth > 0)
 		{
-			anim.SetTrigger("hurt");
+			//anim.SetTrigger("hurt");
 			StartCoroutine(Invunerability());
 		}
 		else
@@ -47,7 +49,7 @@ public class HealthPlayer : MonoBehaviour
 			if (!dead)
 			{
 				dead = true;
-				anim.SetTrigger("die");
+				//anim.SetTrigger("die");
 				Debug.Log("🛑 Player chết");
 
 				foreach (Behaviour component in components)
@@ -77,10 +79,14 @@ public class HealthPlayer : MonoBehaviour
 
 		for (int i = 0; i < numberOfFlashes; i++)
 		{
-			spriteRend.color = new Color(1, 0, 0, 0.5f);
-			yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-			spriteRend.color = Color.white;
-			yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+			foreach(var item in spriteRend){
+				item.color = new Color(1, 0, 0, 0.5f);
+				yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+			}
+			foreach(var item in spriteRend){
+				item.color = Color.white;
+				yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+			}
 		}
 
 		Physics2D.IgnoreLayerCollision(10, 11, false);
