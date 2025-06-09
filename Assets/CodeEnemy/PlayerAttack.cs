@@ -30,10 +30,10 @@ public class PlayerAttack : MonoBehaviour
 		cooldownTimer = 0;
 
 		int fireballIndex = FindFireball();
-		GameObject fireball = fireballs[fireballIndex];
-
-		fireball.transform.position = firePoint.position;
-		fireball.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+		//GameObject fireball = fireballs[fireballIndex];
+		Instantiate( fireballs[0],firePoint.position,Quaternion.identity);
+		//fireball.transform.position = firePoint.position;
+		//fireball.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
 	}
 
 	private int FindFireball()
