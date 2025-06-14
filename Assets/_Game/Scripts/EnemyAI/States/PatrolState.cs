@@ -14,15 +14,23 @@ namespace StateMachine
             nextWayPoint = -1;
         }
 
-  
+        private bool CheckPatrolPathAvailable()
+        {
+            if (entity.PatrolPosition == null || entity.PatrolPosition.Count == 0) return false;
+            foreach (Transform trf in entity.PatrolPosition)
+            {
+                if (trf == null) return false;
+            }
+
+            return true;
+        }
         public override void OnEnter(StateData stateData = null)
         {
             base.OnEnter(stateData);
             entity.CurrentState = this.GetType().Name;
-            if (entity.PatrolPosition == null || entity.PatrolPosition.Count == 0)
+            if (!CheckPatrolPathAvailable())
             {
-                Debug.LogWarning("Position patrol for boss is null");
-                return;
+                entity.PatrolPosition = PatrolPositionManager.Instance.GetPositions(entity.GetType().Name);
             }
 
         
