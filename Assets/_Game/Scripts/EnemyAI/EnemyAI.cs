@@ -44,7 +44,7 @@ namespace BossMap
 
         protected virtual void OnEnable()
         {
-            PatrolPosition = PatrolPositionManager.Instance.GetPositions(this.GetType().Name);
+          
             isInAttackRange = false;
 
             PlayerAttack playerAttack = FindObjectOfType<PlayerAttack>();
