@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3670211765654082375}
   - component: {fileID: 5877021150062003246}
   - component: {fileID: 415838449969935205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SHootBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 911591c24cf61314bb5ad8226a5dd42e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5b92889030c0348b8eec49af1b86c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 14
   lifetime: 2
   rb: {fileID: 5877021150062003246}
 --- !u!50 &5877021150062003246

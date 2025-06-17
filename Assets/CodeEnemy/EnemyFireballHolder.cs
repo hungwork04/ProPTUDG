@@ -6,6 +6,7 @@ public class EnemyFireballHolder : MonoBehaviour
 
 	private void Update()
 	{
+		if(enemy==null) return;
 		transform.localScale = enemy.localScale;
 	}
 }
