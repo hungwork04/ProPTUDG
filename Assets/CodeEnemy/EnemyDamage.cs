@@ -6,7 +6,7 @@ public class EnemyDamage : MonoBehaviour
 
 	protected virtual void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log(collision.tag);
+		Debug.Log(collision.gameObject.name);
 		if (collision.CompareTag("Player"))
 		{
 			HealthPlayer hp = collision.GetComponent<HealthPlayer>();

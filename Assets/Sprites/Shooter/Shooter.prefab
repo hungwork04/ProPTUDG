@@ -272,6 +272,7 @@ MonoBehaviour:
   startingHealth: 5
   iFramesDuration: 0.5
   numberOfFlashes: 3
+  spriteRend: []
   components:
   - {fileID: 7078642705012237553}
   - {fileID: 1861121668466653740}
@@ -545,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 8713518344656264622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96, y: 0.96, z: 0}
+  m_LocalPosition: {x: -0.96000195, y: 0.95999956, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

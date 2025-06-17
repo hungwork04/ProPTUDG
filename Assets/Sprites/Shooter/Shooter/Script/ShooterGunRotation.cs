@@ -7,6 +7,7 @@ public class ShooterGunRotation : MonoBehaviour
  public float minAngle = -60f; // Góc tối thiểu
     public float maxAngle = 60f;  // Góc tối đa
     public Transform playerTransform;
+    public Transform aimPos;
 
     void Update()
     {
@@ -15,13 +16,12 @@ public class ShooterGunRotation : MonoBehaviour
         mousePos.z = transform.position.z; // Đảm bảo z bằng vị trí của súng
 
         // Tính hướng từ súng đến chuột
-        Vector2 direction = mousePos - transform.position;
-        
+        Vector2 direction = mousePos - aimPos.position;
         // Xác định nhân vật quay phải hay trái
         bool facingRight = playerTransform.localScale.x > 0;
 
         // Tính góc từ hướng chuột
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y-1.25f, direction.x) * Mathf.Rad2Deg;
 
         if (facingRight)
         {
@@ -37,6 +37,8 @@ public class ShooterGunRotation : MonoBehaviour
             angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             angle = Mathf.Clamp(angle, minAngle, maxAngle);
             transform.rotation = Quaternion.Euler(0f, 0, -angle);
+
+            
         }
     }
 }

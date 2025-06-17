@@ -25,9 +25,11 @@ public class ShooterBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-                // Xử lý va chạm (ví dụ: hủy đạn khi chạm vào Ground hoặc Enemy)
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy"))
         {
+            if(collision.gameObject.CompareTag("Enemy")){
+                collision.GetComponent<Health>().TakeDamage(1);
+            }
             Destroy(gameObject);
         }
     }
