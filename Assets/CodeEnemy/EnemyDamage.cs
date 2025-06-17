@@ -8,7 +8,7 @@ public class EnemyDamage : MonoBehaviour
 	{
 		if (collision.CompareTag("Player"))
 		{
-			HealthPlayer hp = collision.GetComponent<HealthPlayer>();
+			PlayerCharacterMovement hp = collision.GetComponent<PlayerCharacterMovement>();
 			if (hp != null)
 			{
 				hp.TakeDamage(damage);
