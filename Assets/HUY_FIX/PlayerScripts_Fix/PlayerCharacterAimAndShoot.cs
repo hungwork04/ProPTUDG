@@ -41,8 +41,8 @@ public class PlayerCharacterAimAndShoot : MonoBehaviour
     private void HandleGunRotation()
     {
         float facingDirection = GetComponentInParent<Transform>().localScale.x;
-
-        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        //Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = (worldPosition - (Vector2)gun.transform.position).normalized;
         gun.transform.right = direction;
 
@@ -63,8 +63,10 @@ public class PlayerCharacterAimAndShoot : MonoBehaviour
 
     private void HandleGunShooting()
     {
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        // if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("atk");
             if (currentAmmo > 0)
             {
                 GameObject bulletInst = Instantiate(bullet, shootingPoint.position, gun.transform.rotation);

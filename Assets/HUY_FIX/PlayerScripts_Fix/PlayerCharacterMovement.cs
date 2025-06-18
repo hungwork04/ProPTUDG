@@ -15,7 +15,7 @@ public class PlayerCharacterMovement : MonoBehaviour
 
     [Header("Health")]
     [SerializeField] private float startingHealth = 10;
-    public float currentHealth { get; private set; }
+    public float currentHealth ;
     private bool dead;
 
     void Start()
