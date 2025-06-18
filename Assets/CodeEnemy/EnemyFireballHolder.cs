@@ -9,4 +9,5 @@ public class EnemyFireballHolder : MonoBehaviour
 		if(enemy==null) return;
 		transform.localScale = enemy.localScale;
 	}
+
 }

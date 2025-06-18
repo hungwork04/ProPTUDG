@@ -9,7 +9,7 @@ public class EnemyDamage : MonoBehaviour
 		Debug.Log(collision.gameObject.name);
 		if (collision.CompareTag("Player"))
 		{
-			HealthPlayer hp = collision.GetComponent<HealthPlayer>();
+			PlayerCharacterMovement hp = collision.GetComponent<PlayerCharacterMovement>();
 			if (hp != null)
 			{
 				hp.TakeDamage(damage);

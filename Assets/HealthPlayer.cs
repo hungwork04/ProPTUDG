@@ -50,7 +50,7 @@ public class HealthPlayer : MonoBehaviour
 			{
 				dead = true;
 				//anim.SetTrigger("die");
-				Debug.Log("🛑 Player chết");
+				Debug.Log(" Player chết");
 
 				foreach (Behaviour component in components)
 					component.enabled = false;

@@ -30,7 +30,11 @@ Transform:
   m_GameObject: {fileID: 5111868573227932582}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 5.332152, y: -3.377769, z: 0}
+=======
+  m_LocalPosition: {x: -12.542342, y: 4.394562, z: 0}
+>>>>>>> HuyLe_SuaPlayer
   m_LocalScale: {x: 0.9256, y: 0.8885, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
