@@ -16,7 +16,7 @@ public class EnemyDamage : MonoBehaviour
 				hp.TakeDamage(damage);
 				Debug.Log("💥 Player bị trúng đạn! Gây sát thương: " + damage);
 			}else if(hpPlayer2!=null){
-				//hpPlayer2.TakeDamage(damage);
+				hpPlayer2.TakeDamage(damage);
 				Debug.Log("💥 Player bị trúng đạn! Gây sát thương: " + damage);
 			}
 			else

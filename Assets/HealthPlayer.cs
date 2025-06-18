@@ -6,7 +6,7 @@ public class HealthPlayer : MonoBehaviour
 {
 	[Header("Health")]
 	[SerializeField] private float startingHealth = 5;
-	public float currentHealth { get; private set; }
+	public float currentHealth ;
 	//private Animator anim;
 	private bool dead;
 
@@ -24,15 +24,18 @@ public class HealthPlayer : MonoBehaviour
 	[Header("UI")]
 	[SerializeField] private Image healthBar; // Kéo HealthFill vào đây
 
-	private void Awake()
-	{
-		currentHealth = startingHealth;
+	// private void Awake()
+	// {
+
+	// }
+    void Start()
+    {
+        currentHealth = startingHealth;
 		//anim = GetComponent<Animator>();
 		//spriteRend = GetComponents<SpriteRenderer>();
 		UpdateHealthUI();
-	}
-
-	public void TakeDamage(float _damage)
+    }
+    public void TakeDamage(float _damage)
 	{
 		if (invulnerable || dead) return;
 
@@ -65,11 +68,15 @@ public class HealthPlayer : MonoBehaviour
 		currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
 		UpdateHealthUI();
 	}
-
+	
 	private void UpdateHealthUI()
 	{
-		if (healthBar != null)
-			healthBar.fillAmount = currentHealth / startingHealth;
+		// if (healthBar != null)
+		// 	healthBar.fillAmount = currentHealth / startingHealth;
+		if (UIHealthBar.instance != null){
+			Debug.Log("UpdateUI");
+            UIHealthBar.instance.SetValue(currentHealth / startingHealth);
+		}
 	}
 
 	private IEnumerator Invunerability()
