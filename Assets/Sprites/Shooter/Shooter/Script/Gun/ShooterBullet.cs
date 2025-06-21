@@ -23,12 +23,18 @@ public class ShooterBullet : MonoBehaviour
         rb.velocity = direction.normalized * speed;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("Boss"))
         {
             if(collision.gameObject.CompareTag("Enemy")){
                 collision.GetComponent<Health>().TakeDamage(1);
+            }
+            if(collision.gameObject.CompareTag("Boss")){
+                collision.GetComponent<BossMovement>().makeHitted();
+                collision.GetComponent<BossHealth>().takeDame(1);
+                Debug.Log("bs");
+
             }
             Destroy(gameObject);
         }

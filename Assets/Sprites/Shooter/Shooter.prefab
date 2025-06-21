@@ -161,7 +161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4427877382817392278
 Transform:
   m_ObjectHideFlags: 0
@@ -268,7 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecc4961104fe5344bd61b0a05bfb204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
+  startingHealth: 15
+  currentHealth: 0
   iFramesDuration: 0.5
   numberOfFlashes: 3
   spriteRend:
@@ -278,7 +279,6 @@ MonoBehaviour:
   components:
   - {fileID: 7078642705012237553}
   - {fileID: 1861121668466653740}
-  healthBar: {fileID: 0}
 --- !u!61 &1466477014140521213
 BoxCollider2D:
   m_ObjectHideFlags: 0

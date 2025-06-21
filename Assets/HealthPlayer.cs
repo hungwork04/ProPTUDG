@@ -9,7 +9,6 @@ public class HealthPlayer : MonoBehaviour
 	public float currentHealth ;
 	//private Animator anim;
 	private bool dead;
-
 	[Header("iFrames")]
 	[SerializeField] private float iFramesDuration = 0.5f;
 	[SerializeField] private int numberOfFlashes = 3;
@@ -21,8 +20,8 @@ public class HealthPlayer : MonoBehaviour
 	[SerializeField] private Behaviour[] components;
 	private bool invulnerable;
 
-	[Header("UI")]
-	[SerializeField] private Image healthBar; // Kéo HealthFill vào đây
+	// [Header("UI")]
+	// [SerializeField] private Image healthBar; // Kéo HealthFill vào đây
 
 	// private void Awake()
 	// {
@@ -74,7 +73,7 @@ public class HealthPlayer : MonoBehaviour
 		// if (healthBar != null)
 		// 	healthBar.fillAmount = currentHealth / startingHealth;
 		if (UIHealthBar.instance != null){
-			Debug.Log("UpdateUI");
+			Debug.Log("UpdateUI"+currentHealth / startingHealth);
             UIHealthBar.instance.SetValue(currentHealth / startingHealth);
 		}
 	}

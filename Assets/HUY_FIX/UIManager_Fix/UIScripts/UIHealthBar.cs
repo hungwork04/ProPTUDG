@@ -11,11 +11,12 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-    void Start()
-    {
         originalSize = mask.rectTransform.rect.width;
     }
+    // void Start()
+    // {
+        
+    // }
 
     public void SetValue(float value)
     {
