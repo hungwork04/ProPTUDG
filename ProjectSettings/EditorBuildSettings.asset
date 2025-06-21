@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Man_3.unity
     guid: 2b04d7bb157d21c4380927dfa404a754
   - enabled: 1
-    path: Assets/Scenes/MapBoss_Man 3.unity
+    path: Assets/Scenes/Hung_MapBoss_Man 3.unity
     guid: 1cbb480f64b6f99439219faacf446926
   m_configObjects: {}
