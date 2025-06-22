@@ -13,7 +13,7 @@ namespace BossMap
         [Header("Modifier")]
         public float Speed = 10f;
 
-        public float Damage = 5;
+        public float Damage = 50;
         public Vector3 Direction = Vector3.right;
         public Rigidbody2D RB;
 
@@ -63,6 +63,7 @@ namespace BossMap
         {
             IsDespawn = false;
             isExplode = false;
+            Damage = 50;
             StateMachine.SetState(moveState);
             if (TimeDespawn >= 0)
             {
@@ -83,6 +84,7 @@ namespace BossMap
         {
             if (other.gameObject.tag.Equals("Player") || other.gameObject.tag.Equals("Ground"))
             {
+             
                 Target = other.transform;
                 isExplode = true;
             }

@@ -30,6 +30,7 @@ namespace StateMachine
             entity.CurrentState = this.GetType().Name;
             if (!CheckPatrolPathAvailable())
             {
+                if(PatrolPositionManager.Instance == null) Debug.Log("Null");
                 entity.PatrolPosition = PatrolPositionManager.Instance.GetPositions(entity.GetType().Name);
             }
 

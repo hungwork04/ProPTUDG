@@ -21,7 +21,7 @@ namespace BossMap
             }
             entity.Target = entity.Player;
             entity.AIPath.canMove = false;
-            entity.AIPath.SetPath(null);
+            //entity.AIPath.SetPath(null);
         }
         public override void Update()
         {
@@ -52,7 +52,7 @@ namespace BossMap
                 return;
             }
 
-            Health health = entity.Target.GetComponent<Health>();
+            HealthSystem health = entity.Target.GetComponent<HealthSystem>();
             if(health != null) health.TakeDamage(entity.Damage);
 
         }

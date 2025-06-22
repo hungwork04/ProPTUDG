@@ -1,4 +1,4 @@
-
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 [CustomEditor(typeof(ComponentBehavior), true)]
@@ -10,9 +10,10 @@ public class ComponentBehaviorEditor : Editor
 
         ComponentBehavior cb = (ComponentBehavior)target;
 
-        if (GUILayout.Button("Load Component"))
+        if (GUILayout.Button("LoadComponent"))
         {
             cb.LoadComponent();
         }
     }
 }
+#endif

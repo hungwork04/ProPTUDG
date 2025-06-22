@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StunedDemon
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -953,7 +953,8 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
   m_ScaleCurves: []
   m_FloatCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -981,6 +982,7 @@ AnimationClip:
     path: DemonPSB/Clip
     classID: 212
     script: {fileID: 0}
+    flags: 16
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -996,6 +998,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3171492271
       attribute: 1
@@ -1003,6 +1007,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 21059092
       attribute: 4
@@ -1010,6 +1016,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1641177367
       attribute: 4
@@ -1017,6 +1025,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2559194615
       attribute: 4
@@ -1024,6 +1034,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3171492271
       attribute: 4
@@ -1031,6 +1043,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2162370743
       attribute: 4
@@ -1038,6 +1052,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1123405634
       attribute: 4
@@ -1045,6 +1061,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3456657241
       attribute: 4
@@ -1052,6 +1070,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 604623986
       attribute: 4
@@ -1059,6 +1079,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1999902212
       attribute: 4
@@ -1066,6 +1088,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1012910952
       attribute: 4
@@ -1073,6 +1097,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 21059092
       attribute: 1
@@ -1080,6 +1106,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3456657241
       attribute: 1
@@ -1087,6 +1115,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2162370743
       attribute: 1
@@ -1094,6 +1124,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 644912823
       attribute: 4
@@ -1101,6 +1133,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2479755588
       attribute: 4
@@ -1108,6 +1142,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2944168791
       attribute: 4
@@ -1115,6 +1151,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2280656712
       attribute: 304273561
@@ -1122,6 +1160,8 @@ AnimationClip:
       typeID: 212
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -1144,7 +1184,8 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1199,7 +1240,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1254,7 +1297,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1309,7 +1354,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1373,7 +1420,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1437,7 +1486,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1501,7 +1552,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1565,7 +1618,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1629,7 +1684,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1693,7 +1750,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1721,7 +1780,9 @@ AnimationClip:
     path: DemonPSB/Clip
     classID: 212
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1794,7 +1855,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1867,7 +1930,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1940,7 +2005,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1977,7 +2044,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2014,7 +2083,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2051,7 +2122,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2088,7 +2161,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2125,7 +2200,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2162,7 +2239,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2226,7 +2305,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2290,7 +2371,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2354,7 +2437,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2409,7 +2494,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2464,7 +2551,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2519,7 +2608,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2592,7 +2683,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2665,7 +2758,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2738,7 +2833,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2793,7 +2890,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2848,7 +2947,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2903,7 +3004,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2976,7 +3079,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneBack
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3049,7 +3154,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneBack
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3122,7 +3229,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneBack
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3168,7 +3277,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3214,7 +3325,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3260,7 +3373,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3306,7 +3421,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2/BoneLeg3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3352,7 +3469,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2/BoneLeg3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3398,7 +3517,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2/BoneLeg3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3444,7 +3565,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3490,7 +3613,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3536,7 +3661,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3600,7 +3727,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3664,7 +3793,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3728,7 +3859,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3774,7 +3907,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3820,7 +3955,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3866,7 +4003,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3912,7 +4051,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand/BoneLeftWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3958,7 +4099,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand/BoneLeftWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4004,7 +4147,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand/BoneLeftWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4050,7 +4195,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand/BoneRightWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4096,7 +4243,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand/BoneRightWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4142,8 +4291,10 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand/BoneRightWrist
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_EulerEditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4153,7 +4304,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4163,7 +4316,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4173,7 +4328,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4183,7 +4340,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4193,7 +4352,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4203,7 +4364,9 @@ AnimationClip:
     path: DemonPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4213,7 +4376,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4223,7 +4388,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4233,7 +4400,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4243,7 +4412,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4253,7 +4424,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4263,7 +4436,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4273,7 +4448,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4283,7 +4460,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4293,7 +4472,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4303,7 +4484,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand/BoneLeftWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4313,7 +4496,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand/BoneLeftWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4323,7 +4508,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand/BoneLeftWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4333,7 +4520,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4343,7 +4532,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4353,7 +4544,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4363,7 +4556,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4373,7 +4568,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4383,7 +4580,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4393,7 +4592,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2/BoneLeg3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4403,7 +4604,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2/BoneLeg3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4413,7 +4616,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1/BoneLeg2/BoneLeg3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4423,7 +4628,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneBack
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4433,7 +4640,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneBack
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4443,7 +4652,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneBack
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4453,7 +4664,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand/BoneRightWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4463,7 +4676,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand/BoneRightWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4473,7 +4688,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneRightShoulder/BoneRightHand/BoneRightWrist
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4483,7 +4700,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4493,7 +4712,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4503,7 +4724,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4513,7 +4736,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4523,7 +4748,9 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -4533,6 +4760,7 @@ AnimationClip:
     path: DemonPSB/BoneBody/BoneNeck/BoneLeftShoulder/BoneLeftHand
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []

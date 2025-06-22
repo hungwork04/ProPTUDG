@@ -20,8 +20,12 @@ namespace BossMap
                 return;
             }
 
-            Health health = entity.Target.GetComponent<Health>();
-            if(health != null) health.TakeDamage(entity.Damage);
+            HealthSystem health = entity.Target.GetComponent<HealthSystem>();
+            if (health != null)
+            {
+                health.TakeDamage(entity.Damage);
+               
+            }
         }
 
         public override void AnimationFinishTrigger()

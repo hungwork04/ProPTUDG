@@ -3,16 +3,42 @@ using UnityEngine;
 
 public class Singleton<T> : ComponentBehavior where T : ComponentBehavior
 {
-    private static T instance;
+    protected static T instance;
+    public static bool HasInstance => instance != null;
+
+    public static T TryGetInstance() => HasInstance ? instance : null;
+    private static bool isQuitting = false;
   
-    public static T Instance => instance;
+    public static T Instance
+    {
+        get
+        {
+            if (isQuitting) return null;
+            if (instance == null)
+            {
+                instance = FindAnyObjectByType<T>();
+                if (instance == null)
+                {
+                    var go = new GameObject(typeof(T).Name + "Auto-Generated");
+                    instance = go.AddComponent<T>();
+                }
+            }
+            return instance;
+        }
+    }
 
     protected override void Awake()
     {
-        if (instance == null) instance = (T)(MonoBehaviour)this;
-        else Destroy(gameObject);
+        InitializeSingleton();
 
         base.Awake();
         
     }
+
+    protected virtual void InitializeSingleton()
+    {
+        if (!Application.isPlaying) return;
+        instance = this as T;
+    }
+    protected virtual void OnApplicationQuit() => isQuitting = true;
 }

@@ -981,6 +981,7 @@ GameObject:
   - component: {fileID: 2454012019829419441}
   - component: {fileID: 1802970989698060048}
   - component: {fileID: 3863267474648781322}
+  - component: {fileID: 8395698095879915632}
   m_Layer: 7
   m_Name: Demon
   m_TagString: Enemy
@@ -1194,7 +1195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a736b5fec399b7149a624f1f2245343f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSystem: {fileID: 8395698095879915632}
   CurrentState: 
+  maxHP: 20
   Player: {fileID: 0}
   Target: {fileID: 0}
   PatrolPosition:
@@ -1208,6 +1211,19 @@ MonoBehaviour:
   ApproachRange: 1
   AIDestinationSetter: {fileID: 1802970989698060048}
   AIPath: {fileID: 7407408222395751580}
+--- !u!114 &8395698095879915632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486675851782382594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e064314e94d02409f9e250753059cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
 --- !u!1 &6067510935062277387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1268,7 @@ GameObject:
   - component: {fileID: 3412820687323299453}
   - component: {fileID: 486502747227408664}
   - component: {fileID: 3326302234607158620}
+  - component: {fileID: 8218913928741684536}
   m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
@@ -1361,6 +1378,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 3863267474648781322}
+--- !u!114 &8218913928741684536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098331571694963265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb79288c07d6a84e9d4957c83388978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6928282984208445261
 GameObject:
   m_ObjectHideFlags: 0

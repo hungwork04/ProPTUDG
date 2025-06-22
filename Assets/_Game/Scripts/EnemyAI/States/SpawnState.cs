@@ -16,7 +16,7 @@ namespace BossMap
             base.OnEnter(stateData);
             entity.CurrentState = this.GetType().Name;
             entity.AIPath.canMove = false;
-            entity.AIPath.SetPath(null);
+            //entity.AIPath.SetPath(null);
 
             if (entity.SpawnPositionAvailables == null || entity.SpawnPositionAvailables.Count <= 0)
             {
