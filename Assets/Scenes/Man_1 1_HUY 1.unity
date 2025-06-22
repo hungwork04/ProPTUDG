@@ -2560,6 +2560,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &556205139 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4427877382817392278, guid: 786cf525285251849be506fe07b2cee1, type: 3}
+  m_PrefabInstance: {fileID: 1225782041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &562617328
 GameObject:
   m_ObjectHideFlags: 0
@@ -8046,10 +8051,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4058baa2614e0ee4b97e9ddb251a7de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  leftLimitX: -5
-  rightLimitX: 5
-  followSpeed: 3
+  target: {fileID: 556205139}
+  moveSpeed: 5
+  leftLimit: -20
+  rightLimit: 100
+  zonePercent: 0.3
 --- !u!1 &1431615464
 GameObject:
   m_ObjectHideFlags: 0
