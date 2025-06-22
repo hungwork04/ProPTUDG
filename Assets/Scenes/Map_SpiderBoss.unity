@@ -14749,7 +14749,7 @@ MonoBehaviour:
   isHitted: 0
   bossSkill: {fileID: 1804090664}
   movingTimer: 0
-  JumpTimer: 0
+  RotateTimer: 0
   JumpDameCol: {fileID: 1225763065}
 --- !u!114 &1804090666
 MonoBehaviour:

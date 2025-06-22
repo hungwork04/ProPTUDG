@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/CharacterFolder/Enemy/EnemySprite/EnemyShoot_Map3/Reaper_Man_1/Unity Package/Reaper_Man.unitypackage.meta
 guid: 5f3ccf60d75cc1f4688007b3d9415abe
 DefaultImporter:
+========
+guid: f419c3fb8005c4a47abcf67c10b114f2
+PrefabImporter:
+>>>>>>>> main:Assets/_Game/Scenes/Scenes/EnemyFireball.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
