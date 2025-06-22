@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSystem: {fileID: 4335808261335690425}
   CurrentState: 
-  maxHP: 20
+  maxHP: 100
   Player: {fileID: 0}
   Target: {fileID: 0}
   PatrolPosition:
