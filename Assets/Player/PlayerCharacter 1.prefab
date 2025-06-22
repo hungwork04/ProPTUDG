@@ -229,9 +229,9 @@ MonoBehaviour:
   attackCooldown: 0.52
   firePoint: {fileID: 1486105892588361856}
   fireballs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5111868573227932582, guid: eae06415a1c6be641843cf4facd07733, type: 3}
+  - {fileID: 5111868573227932582, guid: eae06415a1c6be641843cf4facd07733, type: 3}
+  - {fileID: 5111868573227932582, guid: eae06415a1c6be641843cf4facd07733, type: 3}
 --- !u!114 &9106595684008958174
 MonoBehaviour:
   m_ObjectHideFlags: 0

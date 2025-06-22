@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
 
 		if (currentHealth > 0)
 		{
-			anim.SetTrigger("hurt");
+			// anim.SetTrigger("hurt");
 			StartCoroutine(Invunerability());
 		}
 		else
@@ -41,15 +41,15 @@ public class Health : MonoBehaviour
 			if (!dead)
 			{
 				dead = true;
-				anim.SetTrigger("die");
-				Debug.Log("Enemy chết - đang chuẩn bị biến mất");
+				// anim.SetTrigger("die");
+				// Debug.Log("Enemy chết - đang chuẩn bị biến mất");
 
 				// Vô hiệu hoá các component (di chuyển, tấn công,...)
 				foreach (Behaviour component in components)
 					component.enabled = false;
 
 				// Gọi hàm biến mất sau khi animation die phát xong
-				Invoke(nameof(Disappear), 1.5f); // Điều chỉnh thời gian nếu animation dài hơn
+				Disappear();
 			}
 		}
 	}
@@ -80,6 +80,6 @@ public class Health : MonoBehaviour
 	{
 		Debug.Log("Enemy đã biến mất khỏi scene.");
 		// gameObject.SetActive(false); // Hoặc:
-									 Destroy(gameObject);
+		Destroy(gameObject);
 	}
 }

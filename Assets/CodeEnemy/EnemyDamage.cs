@@ -6,12 +6,17 @@ public class EnemyDamage : MonoBehaviour
 
 	protected virtual void OnTriggerEnter2D(Collider2D collision)
 	{
+		Debug.Log(collision.gameObject.name);
 		if (collision.CompareTag("Player"))
 		{
-			HealthPlayer hp = collision.GetComponent<HealthPlayer>();
+			PlayerCharacterMovement hp = collision.GetComponent<PlayerCharacterMovement>();
+			HealthPlayer hpPlayer2=collision.GetComponent<HealthPlayer>();
 			if (hp != null)
 			{
 				hp.TakeDamage(damage);
+				Debug.Log("💥 Player bị trúng đạn! Gây sát thương: " + damage);
+			}else if(hpPlayer2!=null){
+				hpPlayer2.TakeDamage(damage);
 				Debug.Log("💥 Player bị trúng đạn! Gây sát thương: " + damage);
 			}
 			else

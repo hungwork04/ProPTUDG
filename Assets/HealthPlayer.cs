@@ -6,31 +6,35 @@ public class HealthPlayer : MonoBehaviour
 {
 	[Header("Health")]
 	[SerializeField] private float startingHealth = 5;
-	public float currentHealth { get; private set; }
-	private Animator anim;
+	public float currentHealth ;
+	//private Animator anim;
 	private bool dead;
-
 	[Header("iFrames")]
 	[SerializeField] private float iFramesDuration = 0.5f;
 	[SerializeField] private int numberOfFlashes = 3;
-	private SpriteRenderer spriteRend;
+	//private SpriteRenderer spriteRend;
+	public SpriteRenderer[] spriteRend;
+
 
 	[Header("Components")]
 	[SerializeField] private Behaviour[] components;
 	private bool invulnerable;
 
-	[Header("UI")]
-	[SerializeField] private Image healthBar; // Kéo HealthFill vào đây
+	// [Header("UI")]
+	// [SerializeField] private Image healthBar; // Kéo HealthFill vào đây
 
-	private void Awake()
-	{
-		currentHealth = startingHealth;
-		anim = GetComponent<Animator>();
-		spriteRend = GetComponent<SpriteRenderer>();
+	// private void Awake()
+	// {
+
+	// }
+    void Start()
+    {
+        currentHealth = startingHealth;
+		//anim = GetComponent<Animator>();
+		//spriteRend = GetComponents<SpriteRenderer>();
 		UpdateHealthUI();
-	}
-
-	public void TakeDamage(float _damage)
+    }
+    public void TakeDamage(float _damage)
 	{
 		if (invulnerable || dead) return;
 
@@ -39,7 +43,7 @@ public class HealthPlayer : MonoBehaviour
 
 		if (currentHealth > 0)
 		{
-			anim.SetTrigger("hurt");
+			//anim.SetTrigger("hurt");
 			StartCoroutine(Invunerability());
 		}
 		else
@@ -47,8 +51,8 @@ public class HealthPlayer : MonoBehaviour
 			if (!dead)
 			{
 				dead = true;
-				anim.SetTrigger("die");
-				Debug.Log("🛑 Player chết");
+				//anim.SetTrigger("die");
+				Debug.Log(" Player chết");
 
 				foreach (Behaviour component in components)
 					component.enabled = false;
@@ -63,11 +67,15 @@ public class HealthPlayer : MonoBehaviour
 		currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
 		UpdateHealthUI();
 	}
-
+	
 	private void UpdateHealthUI()
 	{
-		if (healthBar != null)
-			healthBar.fillAmount = currentHealth / startingHealth;
+		// if (healthBar != null)
+		// 	healthBar.fillAmount = currentHealth / startingHealth;
+		if (UIHealthBar.instance != null){
+			Debug.Log("UpdateUI"+currentHealth / startingHealth);
+            UIHealthBar.instance.SetValue(currentHealth / startingHealth);
+		}
 	}
 
 	private IEnumerator Invunerability()
@@ -77,10 +85,14 @@ public class HealthPlayer : MonoBehaviour
 
 		for (int i = 0; i < numberOfFlashes; i++)
 		{
-			spriteRend.color = new Color(1, 0, 0, 0.5f);
-			yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-			spriteRend.color = Color.white;
-			yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+			foreach(var item in spriteRend){
+				item.color = new Color(1, 0, 0, 0.5f);
+				yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+			}
+			foreach(var item in spriteRend){
+				item.color = Color.white;
+				yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+			}
 		}
 
 		Physics2D.IgnoreLayerCollision(10, 11, false);
