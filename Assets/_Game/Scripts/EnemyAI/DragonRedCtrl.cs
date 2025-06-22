@@ -1,11 +1,12 @@
 
-using System;
+
 using System.Collections.Generic;
-using Pathfinding;
+using Game.Define;
+using Game.UI;
 using StateMachine;
 
 using UnityEngine;
-using UnityEngine.Serialization;
+
 using Utilities;
 
 
@@ -27,7 +28,7 @@ namespace BossMap
 
 
     [Header("Spawn")] 
-    public float TimeSpawn = 60;
+    public float TimeSpawn = 10;
 
     public int SpawnAmount = 1;
     public GameObject DemonPrefab;
@@ -45,6 +46,8 @@ namespace BossMap
     public PatrolState PatrolState { get; set; }
     public RangedAttackState RangedAttackState { get; set; }
     public SpawnState SpawnState { get; set; }
+    public HurtState HurtState { get; set; }
+    public DeadState DeadState { get; set; }
     #endregion
 
   
@@ -65,9 +68,17 @@ namespace BossMap
         PatrolState = new PatrolState(this, "Move");
         RangedAttackState = new RangedAttackState(this, "Attack");
         SpawnState = new SpawnState(this, "Attack");
+
+        HurtState = new HurtState(this, "Hurt");
+        DeadState = new DeadState(this, "Dead");
+        
+        Any(DeadState, new FuncPredicate(() => OnDead));
+        Any(HurtState, new FuncPredicate(() => IsHurt));
         Any(SpawnState, new FuncPredicate(() => IsSpawn));
         Any(RangedAttackState, new FuncPredicate(IsPlayerInAttackRange));
         
+        
+        At(DeadState, IdleState, new FuncPredicate(() => !OnDead));
         At(RangedAttackState, PatrolState, new FuncPredicate(() => !IsPlayerInAttackRange() && !IsPlayerVisible()));
         At(RangedAttackState, ChaseState, new FuncPredicate(() => !IsPlayerInAttackRange() && IsPlayerVisible()));
         
@@ -82,12 +93,24 @@ namespace BossMap
     }
     
     
+    
     protected override void OnEnable()
     {
         base.OnEnable();
+        
+        
         this.AttackRange = 8;
         this.ApproachRange = 10;
-      
+        this.maxHP = 2;
+        if (healthSystem != null)
+        {
+            healthSystem.Init(maxHP);
+            healthSystem.OnHPChange = OnHPChange;
+            healthSystem.OnDead = OnDeading;
+            TABossMapUI taBossMapUI = UIScreen.Instance as TABossMapUI;
+        
+            if(taBossMapUI != null) taBossMapUI.OnBossHPChange(healthSystem.curHP/healthSystem.maxHP);
+        }
         IsSpawn = false;
         StateMachine.SetState(IdleState);
         if (TimeSpawn > 0)
@@ -97,21 +120,68 @@ namespace BossMap
             SpawnTimeCountDown.OnTimerStop += () => IsSpawn = true;
         }
     }
-    
-    #endregion
 
+    private void OnHPChange()
+    {
+        IsHurt = true;
+        TABossMapUI taBossMapUI = UIScreen.Instance as TABossMapUI;
+        
+        if(taBossMapUI != null) taBossMapUI.OnBossHPChange(healthSystem.curHP/healthSystem.maxHP);
+    }
 
+    private void OnDeading()
+    {
+        OnDead = true;
+        ObserverManager<GameEventType>.Notify(GameEventType.Win);
+    }
     protected override void Update()
     {
         base.Update();
         SpawnTimeCountDown.Tick(Time.deltaTime);
     }
     
+    #endregion
 
-   
+    public override bool IsPlayerVisible()
+    {
+        if (Player == null) return false;
+
+        Vector2 origin = transform.TransformPoint(BossGFX.localScale.x > 0 ? LeftFirePoint : RightFirePoint) ;
+
+        origin = origin.Add(y: -.35f);
+
+        var position = Player.position;
+
+        position = position.Add(y: -.35f);
+        Vector2 direction = ((Vector2)position - origin).normalized;
+
+        RaycastHit2D ray1 = Physics2D.Raycast(origin, direction, Vector3.Distance(origin, position), LayerMask.GetMask("Player", "Ground"));
+
+        origin = origin.Add(y: .7f);
+        position = position.Add(y: .7f);
+        direction = ((Vector2)position - origin).normalized;
+
+        RaycastHit2D ray2 = Physics2D.Raycast(origin, direction, Vector3.Distance(origin, position), LayerMask.GetMask("Player", "Ground"));
+
+        
+        return ray1.collider != null && ray1.collider.CompareTag("Player") && ray2.collider != null && ray2.collider.CompareTag("Player");
+    }
+
+
     private void OnDrawGizmos()
     {
-        if (Player != null) Debug.DrawLine(transform.position, Player.position, Color.red);
+        if (Player != null)
+        {
+            Vector3 origin = transform.TransformPoint(BossGFX.localScale.x > 0 ? LeftFirePoint : RightFirePoint);
+            origin = origin.Add(y: -.35f);
+            Vector3 position = Player.position;
+            position = position.Add(y: -.35f);
+            Debug.DrawLine(origin, position, Color.red);
+            origin = origin.Add(y: .7f);
+            position = position.Add(y: .7f);
+           
+            Debug.DrawLine(origin, position, Color.red);
+        }
         if (SpawnPositionAvailables != null && SpawnPositionAvailables.Count > 0)
         {
             for (int i = 0; i < SpawnPositionAvailables.Count; ++i)

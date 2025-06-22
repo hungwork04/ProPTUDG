@@ -18,7 +18,7 @@ namespace StateMachine
             base.OnEnter(stateData);
             entity.CurrentState = this.GetType().Name;
             entity.AIPath.canMove = false;
-            entity.AIPath.SetPath(null);
+           //entity.AIPath.SetPath(null);
            
             if (entity.TimeIdleDelay <= 0) return;
             countDownTimer = new CountdownTimer(entity.TimeIdleDelay);

@@ -1,6 +1,8 @@
 
 
 
+using System;
+using Cysharp.Threading.Tasks;
 using StateMachine;
 using UnityEngine;
 namespace BossMap
@@ -13,9 +15,12 @@ namespace BossMap
         private PatrolState PatrolState;
         private ChaseState ChaseState;
         private MeleeAttackState AttackState;
+        public HurtState HurtState { get; set; }
+        public DeadState DeadState { get; set; }
         #endregion
         public float Damage { get; set; }
-        
+      
+       
         protected override void Awake()
         {
             base.Awake();
@@ -23,9 +28,17 @@ namespace BossMap
             PatrolState = new PatrolState(this, "Move");
             ChaseState = new ChaseState(this, "Move");
             AttackState = new MeleeAttackState(this, "Attack");
-             
-            Any(AttackState, new FuncPredicate(IsPlayerInAttackRange));
            
+             
+            HurtState = new HurtState(this, "Hurt");
+            DeadState = new DeadState(this, "Dead");
+            
+            Any(DeadState, new FuncPredicate(() => OnDead));
+            Any(HurtState, new FuncPredicate(() => IsHurt));
+            Any(AttackState, new FuncPredicate(IsPlayerInAttackRange));
+
+            At(DeadState, IdleState, new FuncPredicate(() => !OnDead));
+            
             At(AttackState, PatrolState, new FuncPredicate(() => !IsPlayerInAttackRange() && !IsPlayerVisible()));
             At(AttackState, ChaseState, new FuncPredicate(() => !IsPlayerInAttackRange() && IsPlayerVisible()));
 
@@ -43,13 +56,26 @@ namespace BossMap
         protected override void OnEnable()
         {
             base.OnEnable();
-            StateMachine.SetState(PatrolState);
-            this.AttackRange = 1;
-            this.ApproachRange = 1.5f;
-            this.Damage = 4;
+            if(EnemyManager.Instance != null) EnemyManager.Instance.AddEnemy(gameObject);
+            Anim.Rebind();
+            StateMachine.SetState(IdleState);
+          
+            this.AttackRange = 1.5f;
+            this.ApproachRange = 1.9f;
+            this.Damage = 10;
+            this.maxHP = 20;
+            if (healthSystem != null)
+            {
+                healthSystem.Init(maxHP);
+                healthSystem.OnHPChange = () => IsHurt = true;
+                healthSystem.OnDead = () => OnDead = true;
+            }
         }
-       
-        
+
+        private void OnDisable()
+        {
+            if (EnemyManager.Instance != null) EnemyManager.Instance.RemoveEnemy(gameObject);
+        }
     }
 
 }

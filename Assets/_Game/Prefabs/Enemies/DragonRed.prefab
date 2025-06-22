@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3815806448854224481}
   - component: {fileID: 541485284974078483}
   - component: {fileID: 8801689110110196351}
+  - component: {fileID: 4335808261335690425}
   m_Layer: 7
   m_Name: DragonRed
   m_TagString: Enemy
@@ -260,7 +261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ccd1e2b1e42f84dafee47686bf4613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSystem: {fileID: 4335808261335690425}
   CurrentState: 
+  maxHP: 20
   Player: {fileID: 0}
   Target: {fileID: 0}
   PatrolPosition:
@@ -277,7 +280,7 @@ MonoBehaviour:
   FireBallPrefab: {fileID: 7754141723794311185, guid: fa7538cae24bc7042bee56d308a35a2d, type: 3}
   LeftFirePoint: {x: -1.25, y: 0.15, z: 0}
   RightFirePoint: {x: 1.5, y: 0.15, z: 0}
-  TimeSpawn: 6
+  TimeSpawn: 10
   SpawnAmount: 1
   DemonPrefab: {fileID: 5486675851782382594, guid: 0b5757230de2ac846926c905719e30e3, type: 3}
   SpawnPositionAvailables:
@@ -286,6 +289,19 @@ MonoBehaviour:
   - {x: 0, y: 3, z: 0}
   - {x: 0, y: -3, z: 0}
   IsSpawn: 0
+--- !u!114 &4335808261335690425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291074136570256361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e064314e94d02409f9e250753059cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
 --- !u!1 &978160238264704056
 GameObject:
   m_ObjectHideFlags: 0

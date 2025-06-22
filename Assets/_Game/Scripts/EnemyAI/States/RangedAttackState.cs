@@ -21,7 +21,7 @@ namespace StateMachine
             }
             entity.Target = entity.Player;
             entity.AIPath.canMove = false;
-            entity.AIPath.SetPath(null);
+            //entity.AIPath.SetPath(null);
            
         }
 

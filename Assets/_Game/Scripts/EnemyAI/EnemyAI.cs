@@ -1,5 +1,4 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using Pathfinding;
 using StateMachine;
@@ -9,23 +8,34 @@ namespace BossMap
 {
     public class EnemyAI : Entity
     {
-        
+        public HealthSystem healthSystem;
         public string CurrentState;
-        public Transform Player;
+        public float maxHP = 20;
+        [HideInInspector] public Transform Player;
+        
+        
         public Transform Target;
-        public List<Transform> PatrolPosition = new List<Transform>();
-        public Transform BossGFX;
+        [HideInInspector] public List<Transform> PatrolPosition = new List<Transform>();
+        [HideInInspector] public Transform BossGFX;
         
         
-        [Header("Idle")] public float TimeIdleDelay = 3f;
+        [HideInInspector] public float TimeIdleDelay = 3f;
         [Header("Attack")] 
         public float AttackRange = 8f;
 
         public float ApproachRange = 10;
         private bool isInAttackRange;
 
-        
+
+        #region Check Variables
         public bool FinishIdleState { get; set; }
+        public bool IsHurt { get; set; }
+        public bool OnDead { get; set; }
+        
+
+        #endregion
+        
+       
         #region AStart PathFinding Component
 
         public AIDestinationSetter AIDestinationSetter;
@@ -35,7 +45,7 @@ namespace BossMap
         public override void LoadComponent()
         {
             base.LoadComponent();
-      
+            if (healthSystem == null) healthSystem = transform.GetComponent<HealthSystem>();
             if (BossGFX == null) BossGFX = transform.Find("Model");
             if (AIDestinationSetter == null) AIDestinationSetter = GetComponent<AIDestinationSetter>();
             if (AIPath == null) AIPath = GetComponent<AIPath>();
@@ -44,13 +54,16 @@ namespace BossMap
 
         protected virtual void OnEnable()
         {
-          
+
+            IsHurt = false;
+            OnDead = false;
             isInAttackRange = false;
 
-            PlayerAttack playerAttack = FindObjectOfType<PlayerAttack>();
+            Transform player = GameObject.FindWithTag("Player").transform;
 
-            if (playerAttack != null && Player == null) Player = playerAttack.transform;
-           
+            if (player && Player == null) Player = player;
+            
+
         }
 
         public void SetFacing(bool isFacingRight)
@@ -58,7 +71,7 @@ namespace BossMap
             Vector3 currentGFXScale = BossGFX.localScale;
             BossGFX.localScale = new Vector3((isFacingRight ? -1 : 1) * Mathf.Abs(currentGFXScale.x), currentGFXScale.y, currentGFXScale.z);
         }
-        public bool IsPlayerVisible()
+        public virtual bool IsPlayerVisible()
         {
             if (Player == null) return false;
 
@@ -70,7 +83,7 @@ namespace BossMap
             return ray.collider != null && ray.collider.CompareTag("Player");
         
         }
-        protected bool IsPlayerInAttackRange()
+        protected virtual bool IsPlayerInAttackRange()
         {
             if (!IsPlayerVisible()) return false;
        
@@ -81,7 +94,12 @@ namespace BossMap
         
        
         }
-        
+
+        protected override void Update()
+        {
+            if (GameManager.Instance == null || GameManager.Instance.isPauseGame) return;
+            base.Update();
+        }
     }
 }
 
