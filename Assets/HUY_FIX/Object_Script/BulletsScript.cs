@@ -27,5 +27,14 @@ public class BulletsScript : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        if (collision.CompareTag("Boss"))
+        {
+            BossHealth enemyHealth = collision.GetComponent<BossHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.takeDame(1);
+            }
+            Destroy(gameObject);
+        }
     }
 }
