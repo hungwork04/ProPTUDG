@@ -30,9 +30,11 @@ namespace Game.UI
 
         private async void OnButtonClick()
         {
+            btn.interactable = false;
             beforeBtnClick?.Invoke();
             await RunEffect();
             onClick?.Invoke();
+            btn.interactable = true;
         }
         
 

@@ -12,7 +12,7 @@ namespace BossMap
     public class GameManager : Singleton<GameManager>
     {
         [Header("Player")]
-        public GameObject playerPrefab;
+        public List<GameObject> playerPrefabs = new List<GameObject>();
 
         public Vector3 playerSpawnPos;
         [Header("Boss")] 
@@ -52,6 +52,14 @@ namespace BossMap
 
         private async UniTask GameInit()
         {
+            GameObject playerPrefab;
+            if (GameController.Instance == null) playerPrefab = playerPrefabs[0];
+            else
+            {
+                int playerIndex = GameController.Instance.playerIndex;
+                if (playerIndex < 0 || playerIndex >= playerPrefabs.Count) playerIndex = 0;
+                playerPrefab = playerPrefabs[playerIndex];
+            }
             await playerManager.Init(playerPrefab, playerSpawnPos);
             await bossManager.Init(bossPrefab, bossSpawnPos);
         }

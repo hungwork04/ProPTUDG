@@ -162,9 +162,22 @@ namespace BossMap
         direction = ((Vector2)position - origin).normalized;
 
         RaycastHit2D ray2 = Physics2D.Raycast(origin, direction, Vector3.Distance(origin, position), LayerMask.GetMask("Player", "Ground"));
-
         
-        return ray1.collider != null && ray1.collider.CompareTag("Player") && ray2.collider != null && ray2.collider.CompareTag("Player");
+        
+        bool hit1 = ray1.collider != null;
+    
+
+        bool tag1 = hit1 && ray1.collider.CompareTag("Player");
+       
+
+        bool hit2 = ray2.collider != null;
+     
+
+        bool tag2 = hit2 && ray2.collider.CompareTag("Player");
+        
+
+        return tag1 && tag2;
+
     }
 
 

@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Map_SpiderBoss.unity
     guid: 1cbb480f64b6f99439219faacf446926
   - enabled: 1
-    path: Assets/Scenes/Map_DragonBoss.unity
-    guid: ed3f4b12ec821c2438fe90db4fae7b10
+    path: Assets/_Game/Scenes/TABossMap.unity
+    guid: 17446bef7344566428dfce43912d8d8a
   m_configObjects: {}
