@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using AudioSystem;
 using DG.Tweening;
 using Game.Defines;
-using Game.UI;
 using UnityEngine;
+using Game.UI;
 using UnityEngine.SceneManagement;
 
 namespace BossMap
 {
-    public class LoseUI : UIView
+    public class WinUI : UIView
     {
         [SerializeField] private ScaleBtn exitBtn;
         [SerializeField] private ScaleBtn replayBtn;
         public override void LoadComponent()
         {
             base.LoadComponent();
-            ShowAnimation = ViewAnimationType.DipToBlack;
-            HideAnimation = ViewAnimationType.DipToBlack;
+            ShowAnimation = ViewAnimationType.PopZoom;
+            HideAnimation = ViewAnimationType.PopZoom;
             Transform buttonHolder = transform.Find("Buttons");
             if (exitBtn == null) exitBtn = buttonHolder.Find("Exit").gameObject.GetOrAdd<ScaleBtn>();
             if (replayBtn == null) replayBtn = buttonHolder.Find("Replay").gameObject.GetOrAdd<ScaleBtn>();
@@ -40,7 +39,7 @@ namespace BossMap
 
         private async void OnReplayBtnClick()
         {
-            await UIScreen.HideUI<LoseUI>(true, () =>
+            await UIScreen.HideUI<WinUI>(true, () =>
             {
                 if (GameManager.Instance != null) GameManager.Instance.ReplayGame();
             });
@@ -53,5 +52,6 @@ namespace BossMap
             SceneManager.LoadScene("MainMenu");
         }
     }
+
 }
 

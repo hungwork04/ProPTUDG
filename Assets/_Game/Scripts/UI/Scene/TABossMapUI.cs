@@ -23,21 +23,26 @@ namespace BossMap
             AddUIView<PauseUI>();
             AddUIView<SettingUI>();
             AddUIView<LoseUI>();
+            AddUIView<WinUI>();
         }
 
         private void OnEnable()
         {
             pauseBtn.OrNull()?.onClick.AddListener(OnPauseBtnClick);
             ObserverManager<GameEventType>.Attach(GameEventType.Lose, OnLose);
+            ObserverManager<GameEventType>.Attach(GameEventType.Win, OnWin);
+            
         }
 
         private void OnDisable()
         {
             pauseBtn.OrNull()?.onClick.RemoveAllListeners();
+            ObserverManager<GameEventType>.Detach(GameEventType.Win, OnWin);
             ObserverManager<GameEventType>.Detach(GameEventType.Lose, OnLose);
         }
 
         private async void OnPauseBtnClick() => await ShowUI<PauseUI>();
+        private async void OnWin(object param) =>  await ShowUI<WinUI>();
 
         public void OnPlayerHPChange(float value) => playerHealth.OnHPChange(value);
         public void OnBossHPChange(float value) => bossHealth.OnHPChange(value);
