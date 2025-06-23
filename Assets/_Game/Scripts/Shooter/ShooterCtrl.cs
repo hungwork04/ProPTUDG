@@ -14,12 +14,12 @@ namespace BossMap
         
         public float maxHP;
         public float curHP;
-        private SpriteRenderer head;
+        public SpriteRenderer head;
         public override void LoadComponent()
         {
             base.LoadComponent();
             if (healthSystem == null) healthSystem = gameObject.GetOrAdd<HealthSystem>();
-            if (head == null) head = transform.Find("Body/Other/HeadPos/Head").GetComponent<SpriteRenderer>();
+           
         }
 
         private void OnEnable()

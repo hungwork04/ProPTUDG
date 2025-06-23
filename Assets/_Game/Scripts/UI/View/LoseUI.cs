@@ -4,6 +4,7 @@ using AudioSystem;
 using Game.Defines;
 using Game.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BossMap
 {
@@ -21,6 +22,7 @@ namespace BossMap
             if (replayBtn == null) replayBtn = buttonHolder.Find("Replay").gameObject.GetOrAdd<ScaleBtn>();
             
             replayBtn.OrNull()?.Init(OnReplayBtnClick);
+            exitBtn.OrNull()?.Init(OnExitBtnClick);
         }
 
         public override void Show()
@@ -41,6 +43,11 @@ namespace BossMap
             {
                 if (GameManager.Instance != null) GameManager.Instance.ReplayGame();
             });
+        }
+
+        private void OnExitBtnClick()
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
