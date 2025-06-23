@@ -1319,11 +1319,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786cf525285251849be506fe07b2cee1, type: 3}
---- !u!4 &347663073 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4427877382817392278, guid: 786cf525285251849be506fe07b2cee1, type: 3}
-  m_PrefabInstance: {fileID: 347663072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &356738726
 GameObject:
   m_ObjectHideFlags: 0
@@ -9214,7 +9209,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.73
+  orthographic size: 10.26
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9257,11 +9252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4058baa2614e0ee4b97e9ddb251a7de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 347663073}
-  moveSpeed: 5
-  leftLimit: -20
-  rightLimit: 100
-  zonePercent: 0.3
+  player: {fileID: 0}
+  leftLimitX: -5
+  rightLimitX: 5
+  followSpeed: 3
 --- !u!1 &1384243155
 GameObject:
   m_ObjectHideFlags: 0
