@@ -55,8 +55,15 @@ public class SpiderConScript : MonoBehaviour
         if(collision.gameObject.tag=="Player"){
             StopAllCoroutines();
             Destroy(gameObject);
-            collision.GetComponent<HealthPlayer>().TakeDamage(2);
-            Debug.Log("-2");
+            if(collision.GetComponent<HealthPlayer>()!=null)
+                    collision.GetComponent<HealthPlayer>().TakeDamage(2);
+            if(collision.GetComponent<PlayerCharacterMovement>()!=null){
+                    collision.GetComponent<PlayerCharacterMovement>().TakeDamage(2);
+                }
+                Debug.Log("-1");
         }
+         if(collision.gameObject.CompareTag("Player")){
+               
+            }
     }
 }
