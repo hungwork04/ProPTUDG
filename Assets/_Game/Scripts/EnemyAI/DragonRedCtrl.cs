@@ -101,7 +101,7 @@ namespace BossMap
         
         this.AttackRange = 8;
         this.ApproachRange = 10;
-        this.maxHP = 2;
+        this.maxHP = 2000;
         if (healthSystem != null)
         {
             healthSystem.Init(maxHP);
