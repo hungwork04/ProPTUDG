@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamBoss : MonoBehaviour
 {
     public Transform player1;
-    public Transform player2;
+    public Transform Boss;
 
     public float fixedY = 5f;
     public float smoothTime = 0.3f;
@@ -22,11 +22,11 @@ public class CamBoss : MonoBehaviour
 
     void LateUpdate()
     {
-        if (player1 == null || player2 == null)
+        if (player1 == null || Boss == null)
             return;
 
         Vector2 pos1 = player1.position;
-        Vector2 pos2 = player2.position;
+        Vector2 pos2 = Boss.position;
 
         // Tính điểm giữa
         float midX = (pos1.x + pos2.x) / 2f;

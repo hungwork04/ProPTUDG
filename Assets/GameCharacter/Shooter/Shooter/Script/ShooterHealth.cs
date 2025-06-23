@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ShooterHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    HorizontalCameraFollow horizontalCamera;
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        horizontalCamera=FindAnyObjectByType<HorizontalCameraFollow>();
+        if(horizontalCamera!=null){
+            horizontalCamera.player=this.transform;
+        }
     }
 }

@@ -17,7 +17,19 @@ public class PlayerCharacterMovement : MonoBehaviour
     [SerializeField] private float startingHealth = 10;
     public float currentHealth ;
     private bool dead;
-
+    HorizontalCameraFollow horizontalCamera;
+    CamBoss camBoss;
+    private void Awake()
+    {
+        horizontalCamera=FindAnyObjectByType<HorizontalCameraFollow>();
+        if(horizontalCamera!=null){
+            horizontalCamera.player=this.transform;
+        }
+        camBoss=FindAnyObjectByType<CamBoss>();
+        if(camBoss!=null){
+            camBoss.player1=this.transform;
+        }
+    }
     void Start()
     {
         currentHealth = startingHealth;

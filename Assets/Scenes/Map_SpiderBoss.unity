@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 1322810079}
-  player2: {fileID: 1804090658}
+  Boss: {fileID: 0}
   fixedY: 2.48
   smoothTime: 0.3
   minX: -0.88
@@ -9029,8 +9029,8 @@ Transform:
   m_GameObject: {fileID: 1115861210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.0708, y: -4.55, z: 0.032399587}
-  m_LocalScale: {x: 3.2216105, y: 2.8342667, z: 2.0815222}
+  m_LocalPosition: {x: 43.1226, y: -6.6508, z: 0.032399587}
+  m_LocalScale: {x: 3.679205, y: 3.394303, z: 2.0815222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1307559841}
@@ -16592,8 +16592,8 @@ Transform:
   m_GameObject: {fileID: 2115831703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.887, y: -4.55, z: 0.032399587}
-  m_LocalScale: {x: 3.2216105, y: 2.8342667, z: 2.0815222}
+  m_LocalPosition: {x: -9.3862, y: -6.518, z: 0.032399587}
+  m_LocalScale: {x: 4.196067, y: 3.359084, z: 2.0815222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1307559841}
@@ -17253,10 +17253,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3853812081846221533, guid: c00f1755cd49911489e468f101605d19, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 638114593}
+    - target: {fileID: 3853812081846221533, guid: c00f1755cd49911489e468f101605d19, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853812081846221533, guid: c00f1755cd49911489e468f101605d19, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4581236882147546359, guid: c00f1755cd49911489e468f101605d19, type: 3}
       propertyPath: bgMusic
       value: 
       objectReference: {fileID: 237989661884213116}
+    - target: {fileID: 5340840806468384797, guid: c00f1755cd49911489e468f101605d19, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340840806468384797, guid: c00f1755cd49911489e468f101605d19, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340840806468384797, guid: c00f1755cd49911489e468f101605d19, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
