@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 2514185811466911146, guid: 9d7695bfc73a98c48aacf869944076f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7288257677191901108, guid: 9d7695bfc73a98c48aacf869944076f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.996275

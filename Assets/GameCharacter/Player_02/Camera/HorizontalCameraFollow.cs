@@ -11,12 +11,12 @@ public class HorizontalCameraFollow : MonoBehaviour
 
     void Start()
     {
-        if (player == null)
-        {
-            Debug.LogError("Player chưa được gán trong CameraFollowX!");
-            enabled = false;
-            return;
-        }
+        // if (player == null)
+        // {
+        //     Debug.LogError("Player chưa được gán trong CameraFollowX!");
+        //     enabled = false;
+        //     return;
+        // }
 
         cameraZ = transform.position.z;
     }

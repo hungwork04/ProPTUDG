@@ -6,6 +6,8 @@ public class MainMenuUI : MonoBehaviour
 	public GameObject panelTutorial;
 	public GameObject panelStory;
 	public GameObject panelSetting;
+	public GameObject panelSelectCharacter;
+
 
 	// Hàm mở Panel Tutorial
 	public void OpenTutorial()
@@ -35,6 +37,9 @@ public class MainMenuUI : MonoBehaviour
 		panelSetting.SetActive(true);
 	}
 
+	public void OpenSelectCharacter(){
+		panelSelectCharacter.SetActive(true);
+	}
 	public void CloseSetting()
 	{
 		panelSetting.SetActive(false);
@@ -44,7 +49,7 @@ public class MainMenuUI : MonoBehaviour
 	public void PlayGame()
 	{
 		
-		SceneManager.LoadScene("Man_1");
+		SceneManager.LoadScene(1);
 		// Debug.Log("Man_1");
 	}
 

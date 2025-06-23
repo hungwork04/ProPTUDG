@@ -136,6 +136,8 @@ MonoBehaviour:
   speed: 8
   jumpForce: 8
   startingHealth: 10
+  currentHealth: 0
+  maxJumps: 2
 --- !u!114 &474265135041581812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,8 +155,8 @@ MonoBehaviour:
   shootingPoint: {fileID: 6225014397378859024}
   rb: {fileID: 54668028100414614}
   recoilForce: 5
-  maxAmmo: 6
-  reloadTime: 2
+  maxAmmo: 20
+  reloadTime: 1
 --- !u!61 &6894669017527232566
 BoxCollider2D:
   m_ObjectHideFlags: 0

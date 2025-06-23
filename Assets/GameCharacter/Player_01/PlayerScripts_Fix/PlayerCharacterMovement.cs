@@ -19,6 +19,9 @@ public class PlayerCharacterMovement : MonoBehaviour
     private bool dead;
     HorizontalCameraFollow horizontalCamera;
     CamBoss camBoss;
+    BossController bossController;
+    public int maxJumps = 2; // Số lần nhảy tối đa (2 cho double jump)
+    private int jumpCount; // Đếm số lần nhảy hiện tại
     private void Awake()
     {
         horizontalCamera=FindAnyObjectByType<HorizontalCameraFollow>();
@@ -28,6 +31,26 @@ public class PlayerCharacterMovement : MonoBehaviour
         camBoss=FindAnyObjectByType<CamBoss>();
         if(camBoss!=null){
             camBoss.player1=this.transform;
+        }
+        bossController=FindAnyObjectByType<BossController>();
+        if(bossController!=null){
+            bossController.playerPos=this.transform;
+        }
+    }
+
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpCount++;
+        }
+    }
+        private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            jumpCount = 0; // Reset số lần nhảy
         }
     }
     void Start()
@@ -42,6 +65,7 @@ public class PlayerCharacterMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         UpdateAnimation();
         Flip();
+        Jump();
     }
 
     void FixedUpdate()

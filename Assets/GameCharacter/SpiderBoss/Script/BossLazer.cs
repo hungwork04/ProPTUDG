@@ -9,7 +9,11 @@ public class BossLazer : ShooterBullet
         if (collision.gameObject.CompareTag("Player"))
         {
             if(collision.gameObject.CompareTag("Player")){
-                collision.GetComponent<HealthPlayer>().TakeDamage(2);
+                if(collision.GetComponent<HealthPlayer>()!=null)
+                    collision.GetComponent<HealthPlayer>().TakeDamage(2);
+                if(collision.GetComponent<PlayerCharacterMovement>()!=null){
+                    collision.GetComponent<PlayerCharacterMovement>().TakeDamage(2);
+                }
                 Debug.Log("-1");
             }
             Destroy(gameObject);
