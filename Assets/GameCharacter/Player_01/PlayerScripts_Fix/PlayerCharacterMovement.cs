@@ -102,7 +102,7 @@ public class PlayerCharacterMovement : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            anim.SetTrigger("hurt");
+            //anim.SetTrigger("hurt");
         }
         else
         {
