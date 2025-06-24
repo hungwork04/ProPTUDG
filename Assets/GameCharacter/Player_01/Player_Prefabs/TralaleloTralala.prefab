@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6225014397378859024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6894669017527232566}
   - component: {fileID: 54668028100414614}
   - component: {fileID: 198053143795524529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TralaleloTralala
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc05149ef12acab428ea41f571921843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGameOver: {fileID: 0}
   speed: 8
   jumpForce: 8
   startingHealth: 10
@@ -260,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5732912073580711427}
   - component: {fileID: 6140582807792512606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 50 BMG sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

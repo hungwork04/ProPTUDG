@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerCharacterMovement : MonoBehaviour
 {
-    public float speed = 8.0f;
+	public GameObject canvasGameOver;
+	public float speed = 8.0f;
     public float jumpForce = 8.0f;
 
     private Rigidbody2D rb;
@@ -112,7 +113,8 @@ public class PlayerCharacterMovement : MonoBehaviour
                 Debug.Log("Player đã chết!");
                 GetComponent<PlayerCharacterMovement>().enabled = false;
                 GetComponent<PlayerCharacterAimAndShoot>().enabled = false;
-            }
+				FindObjectOfType<GameManagerScript>().gameOver();
+			}
         }
 
         if (UIHealthBar.instance != null)
