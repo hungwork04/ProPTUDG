@@ -11,7 +11,7 @@ namespace BossMap
         public HealthSystem healthSystem;
         public string CurrentState;
         public float maxHP = 20;
-        [HideInInspector] public Transform Player;
+        public Transform Player;
         
         
         public Transform Target;
