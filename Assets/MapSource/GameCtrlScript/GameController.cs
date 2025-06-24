@@ -9,8 +9,8 @@ public class GameController : MonoBehaviour
 
     public int playerIndex = -1;
     public List<GameObject> players = new List<GameObject>();
-
-    private void Awake()
+	public GameObject canvasGameOver;
+	private void Awake()
     {
         // Đảm bảo chỉ có 1 instance duy nhất
         if (Instance != null && Instance != this)
@@ -22,12 +22,21 @@ public class GameController : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject); // Giữ lại khi load scene mới (nếu cần)
     }
-
-    public void SpawnPlayer(Transform pos)
+	
+	public void SpawnPlayer(Transform pos)
     {
         if (playerIndex < 0 || playerIndex >= players.Count)
             playerIndex = 0;
 
-        Instantiate(players[playerIndex], pos.position, pos.rotation);
-    }
+		GameObject player = Instantiate(players[playerIndex], pos.position, pos.rotation);
+
+		// Gán UI GameOver cho player
+		var healthPlayer = player.GetComponent<HealthPlayer>();
+		if (healthPlayer != null)
+			healthPlayer.canvasGameOver = canvasGameOver;
+
+		var playerMove = player.GetComponent<PlayerCharacterMovement>();
+		if (playerMove != null)
+			playerMove.canvasGameOver = canvasGameOver;
+	}
 }

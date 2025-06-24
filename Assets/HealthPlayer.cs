@@ -4,6 +4,7 @@ using System.Collections;
 
 public class HealthPlayer : MonoBehaviour
 {
+	public GameObject canvasGameOver;
 	[Header("Health")]
 	[SerializeField] private float startingHealth = 5;
 	public float currentHealth ;
@@ -32,6 +33,10 @@ public class HealthPlayer : MonoBehaviour
         currentHealth = startingHealth;
 		//anim = GetComponent<Animator>();
 		//spriteRend = GetComponents<SpriteRenderer>();
+		if (canvasGameOver == null)
+		{
+			canvasGameOver = GameObject.Find("Canvas_GameOver");
+		}
 		UpdateHealthUI();
     }
     public void TakeDamage(float _damage)
@@ -52,10 +57,11 @@ public class HealthPlayer : MonoBehaviour
 			{
 				dead = true;
 				//anim.SetTrigger("die");
-				Debug.Log(" Player chết");
+				
 
 				foreach (Behaviour component in components)
 					component.enabled = false;
+				FindObjectOfType<GameManagerScript>().gameOver();
 
 				Invoke(nameof(Disappear), 1.5f);
 			}
@@ -104,4 +110,5 @@ public class HealthPlayer : MonoBehaviour
 		Debug.Log("🧍 Player biến mất khỏi scene");
 		Destroy(gameObject);
 	}
+	
 }

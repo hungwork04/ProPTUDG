@@ -155,6 +155,7 @@ MonoBehaviour:
   players:
   - {fileID: 5008149320780866263, guid: 3b81bd35054ced34eac16b58d2035a91, type: 3}
   - {fileID: 2781380855596155939, guid: 786cf525285251849be506fe07b2cee1, type: 3}
+  canvasGameOver: {fileID: 8797884847907855151, guid: 844e881f35de08d4aa5c319ad1581774, type: 3}
 --- !u!4 &132339927
 Transform:
   m_ObjectHideFlags: 0
