@@ -137,7 +137,16 @@ public class BossSkill : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxLength, hitLayers);
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.name);
+            if (hit.collider.CompareTag("Player"))
+            {
+                var health = hit.collider.GetComponent<HealthPlayer>();
+                if (health != null)
+                    health.TakeDamage(0.1f);
+
+                var movement = hit.collider.GetComponent<PlayerCharacterMovement>();
+                if (movement != null)
+                    movement.TakeDamage(0.1f);
+            }
         }
 
         float laserLength = hit.collider ? hit.distance : maxLength;
